@@ -1,0 +1,10 @@
+name: Hayya-Nabnee
+version: 0.0.1
+description: >
+  A website that helps local community leaders, "Jamayah," to
+  organize building and rennovation projects which volunteers can join.
+author: Andreas Stocker <andreas@stockers.org>
+homepage: https://hayyanabnee.com
+dependencies:
+  angular: "any"
+  browser: "any"
