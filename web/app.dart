@@ -1,11 +1,12 @@
 library app;
 
 import 'dart:html';
+import 'dart:convert';
 import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
 import 'package:angular/routing/module.dart';
 
-part 'modules/project_list.dart';
+part 'controllers/project_list.dart';
 
 class AppModule extends Module {
   AppModule() {
