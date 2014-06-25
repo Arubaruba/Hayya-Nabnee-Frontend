@@ -8,19 +8,23 @@ dynamic localeData;
 
 @Formatter(name: 'i')
 class I18n {
-
   call(dynamic value) {
-    dynamic specialFunction = '';
-    if (value.runtimeType == String) {
-      if (specialFunction == 'switchToLocale') {
-        loadLocale(value);
-      } else if (localeData != null && localeData[value] != null) {
-        return localeData[value];
-      } else {
-        return '_' + value + '_';
-      }
+    if (localeData != null && localeData[value] != null) {
+      return localeData[value];
     } else {
-      print('i18n formatter requires a string, was given a ' + value.runtimeType.toString());
+      if (localeData != null) {
+        print('Missing Localization String: '+value);
+      }
+      return '_' + value + '_';
+    }
+  }
+}
+
+@Controller(selector:'[i18n-switch]', publishAs: 'ctrl')
+class I18nSwitch {
+  void switchToLocale(String localeCode) {
+    if (localeCodes.contains(localeCode)) {
+      loadLocale(localeCode);
     }
   }
 }
@@ -32,7 +36,6 @@ Future loadLocale(String locale) {
       JsonDecoder decoder = new JsonDecoder();
       try {
         localeData = decoder.convert(response);
-        print(localeData);
       } catch (error) {
         print('Unable to parse locale file: ' + localeFile);
         print(error);

@@ -8,3 +8,4 @@ homepage: https://hayyanabnee.com
 dependencies:
   angular: "any"
   browser: "any"
+  pbkdf2: "any"
