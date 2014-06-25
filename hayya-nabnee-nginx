@@ -26,7 +26,7 @@ server {
 		try_files $uri /$uri /index.html =404;
 	}
 
-	location ~* \.(dart|css) {
+	location ~* \.(dart|css|i18n) {
 		try_files $uri /$uri =404;
 	}
 
