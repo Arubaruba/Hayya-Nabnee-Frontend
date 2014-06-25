@@ -1,4 +1,29 @@
 body{
-  font-family: "Arial";
-  font-size:22px;
+  color:#222;
+  font-family:"Arial";
+  font-size:18px;
+  min-width:360px;
+}
+#title_area{
+  height:200px;
+  background:#4C910F;
+  text-align: center;
+}
+#upper_menu{
+  padding:10px;
+  height: 35px;
+  background:#4C910F;
+  margin-bottom: 30px;
+}
+[dir=ltr] #upper_menu{
+  text-align:left;
+}
+[dir=rtl] #upper_menu{
+  text-align:right;
+}
+[dir=ltr] #upper_menu #right_area{
+  float:right;
+}
+[dir=rtl] #upper_menu #right_area{
+  float:left;
 }
