@@ -18,6 +18,7 @@ class AppModule extends Module {
   AppModule() {
     bind(RouteInitializerFn, toValue: initRoutes);
     bind(I18n);
+    bind(I18nSwitch);
     bind(ProjectList);
   }
 }
@@ -31,7 +32,7 @@ void initRoutes(Router router, RouteViewFactory view) {
 main() {
   
   final String globalJsonFile = i18nDir + 'global.json';
-  final String localJsonFile = i18nDir + localeCodes.first + '.json';
+  final String localJsonFile = i18nDir + currentLocale + '.json';
   
   //The the localization strings need to be loaded before the app can be displayed
   Future.wait([

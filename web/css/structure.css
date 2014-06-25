@@ -4,26 +4,27 @@ body{
   font-size:18px;
   min-width:360px;
 }
-#title_area{
-  height:200px;
+body[ng-cloak]{
+  display:none;
+}
+#upper_area{
+  padding:10px;
   background:#4C910F;
+}
+#title_area{
+  padding: 30px;
   text-align: center;
 }
 #upper_menu{
-  padding:10px;
   height: 40px;
-  background:#4C910F;
-  margin-bottom: 30px;
 }
-[dir=ltr] #upper_menu{
-  text-align:left;
-}
-[dir=rtl] #upper_menu{
-  text-align:right;
-}
-[dir=ltr] #upper_menu #right_area{
+[d=l] #upper_menu #right_area{
   float:right;
 }
-[dir=rtl] #upper_menu #right_area{
+[d=r] #upper_menu #right_area{
   float:left;
+}
+#language_selection_area{
+  font-size: 18px;
+  color: #ccc;
 }

@@ -1,24 +1,31 @@
 <!DOCTYPE HTML>
-<html lang="{{'Locale Code'|i}}" dir="auto">
+<html lang="{{'Locale Code'|i}}" dir="auto" d="{{'Locale Direction'|i}}">
   <head>
     <link rel="stylesheet" type="text/css" href="/css/master.css">
+    <script type="application/dart" src="app.dart"></script>
+    <script src="packages/browser/dart.js"></script>
   </head>
-  <body ngcloak>
-    <div id="title_area">
+  <body ng-cloak>
+    <div id="upper_area">
       <div id="upper_menu">
         <a href="/" class="link">{{'Home'|i}}</a>
-          <a href="/" class="link">{{'Home'|i}}</a>
         <span id="right_area">
           <a href="" class="link">{{'Sign In'|i}}</a>
           <a href="" class="button">{{'Sign Up'|i}}</a>
         </span>
       </div>
-      <div id="website_title">{{'Hayya Nabnee'|i}}</div>
-      <div id="website_slogan">{{'Let\'s Build'|i}}</div>
+      <div id="title_area">
+        <div id="website_title">{{'Hayya Nabnee'|i}}</div>
+        <div id="website_slogan">{{'Let\'s Build'|i}}</div>
+      </div>
+      <div id="language_selection_area" i18n-switch>
+        {{'Languages'|i}}:
+        <a href="" class="language" ng-repeat="locale in ctrl.getOtherLocales() | orderBy:''">
+          {{locale|i:'g'}}
+        </a>
+      </div>
     </div>
     Sample Text
     <ng-view></ng-view>
-    <script type="application/dart" src="app.dart"></script>
-    <script src="packages/browser/dart.js"></script>
   </body>
 </html>

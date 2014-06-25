@@ -1,7 +1,10 @@
 {
   "Locale Code":"en",
+  "Locale Direction":"l",
 
   "Home":"Home",
+  "Languages": "Languages",
+
   "Sign Up": "Sign Up",
   "Sign In": "Sign In",
 

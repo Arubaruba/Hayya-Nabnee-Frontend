@@ -2,27 +2,28 @@
   color: #333;
   text-decoration: underline;
 }
-[dir=ltr] #upper_menu .link{
+[d=l] #upper_menu .link{
   margin-right: 8px;
 }
-[dir=rtl] #upper_menu .link{
+[d=r] #upper_menu .link{
   margin-left: 8px;
 }
 
 #upper_menu .link:hover{
   color: #555;
 }
-
 #upper_menu .button{
   text-decoration: none;
   padding: 5px;
   /*To remove the side padding's effect on positioning*/
   margin: -5px;
   background: #444;
-  color:#fff;
+  color:#ccc;
 }
-
-#upper_menu #switch_language{
-  color: #333;
+#language_selection_area .language{
+  color: inherit;
+  font-weight: bold;
+}
+#language_selection_area .language:hover{
   text-decoration: underline;
 }
