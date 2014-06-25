@@ -2,6 +2,12 @@
   color: #333;
   text-decoration: underline;
 }
+[dir=ltr] #upper_menu .link{
+  margin-right: 8px;
+}
+[dir=rtl] #upper_menu .link{
+  margin-left: 8px;
+}
 
 #upper_menu .link:hover{
   color: #555;
@@ -10,14 +16,13 @@
 #upper_menu .button{
   text-decoration: none;
   padding: 5px;
-  background: #333;
+  /*To remove the side padding's effect on positioning*/
+  margin: -5px;
+  background: #444;
   color:#fff;
 }
 
-.button-green-l {
-  background: linear-gradient(to top, #000, #fff);
-}
-
-.button-s {
-
+#upper_menu #switch_language{
+  color: #333;
+  text-decoration: underline;
 }

@@ -1,7 +1,10 @@
 {
   "Locale Code":"en",
-  "Locale Direction":"ltr",
+
   "Home":"Home",
+  "Sign Up": "Sign Up",
+  "Sign In": "Sign In",
+
   "Hayya Nabnee":"Hayya Nabnee",
   "Let's Build":"Let's Build"
 }
