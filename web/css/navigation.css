@@ -1,3 +1,6 @@
+a{
+  cursor:pointer;
+}
 #upper_menu .link{
   color: #333;
   text-decoration: underline;
@@ -23,6 +26,7 @@
 #language_selection_area .language{
   color: inherit;
   font-weight: bold;
+  text-decoration: none;
 }
 #language_selection_area .language:hover{
   text-decoration: underline;

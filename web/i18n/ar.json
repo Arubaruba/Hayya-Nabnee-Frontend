@@ -1,3 +1,12 @@
 {
-  "localeName":"Arabic"
+  "Locale Code":"ar",
+  "Locale Direction":"r",
+
+  "Home":"1Home",
+
+  "Sign Up": "1Sign Up",
+  "Sign In": "1Sign In",
+
+  "Hayya Nabnee":"1Hayya Nabnee",
+  "Let's Build":"1Let's Build"
 }

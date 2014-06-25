@@ -30,24 +30,8 @@ void initRoutes(Router router, RouteViewFactory view) {
 }
 
 main() {
-  
-  final String globalJsonFile = i18nDir + 'global.json';
-  final String localJsonFile = i18nDir + currentLocale + '.json';
-  
   //The the localization strings need to be loaded before the app can be displayed
-  Future.wait([
-    loadJson(globalJsonFile).then((dynamic data){
-      globalJsonData = data;
-    }).catchError((_){
-      print('Unable to load: ' + globalJsonFile);
-    }),
-    loadJson(localJsonFile).then((dynamic data){
-      localJsonData = data;
-    }).catchError((_){
-      print('Unable to load: ' + localJsonFile);
-    }),
-  ])
-  .then((_){
+  loadI18nData(currentLocale).then((_){
     applicationFactory().addModule(new AppModule()).run();
   });
 }
