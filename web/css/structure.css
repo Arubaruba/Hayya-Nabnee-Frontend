@@ -1,12 +1,19 @@
 body{
   color:#222;
   font-family:"Arial";
-  font-size:18px;
+  font-size:16px;
   min-width:360px;
   opacity: 100;
+  background:#ddd;
 }
 body[ng-cloak]{
   display:none;
+}
+#content[d=l]{
+  text-align: left;
+}
+#content[d=r]{
+  text-align: right;
 }
 #upper_area{
   padding:10px;
@@ -17,6 +24,7 @@ body[ng-cloak]{
   text-align: center;
 }
 #upper_menu{
+  font-size: 18px;
   height: 40px;
 }
 [d=l] #upper_menu #right_area{
@@ -26,6 +34,8 @@ body[ng-cloak]{
   float:left;
 }
 #language_selection_area{
+  /* This stays the same regardless of language - for the sake of consistency */
+  text-align:left;
   font-size: 18px;
   color: #ccc;
 }

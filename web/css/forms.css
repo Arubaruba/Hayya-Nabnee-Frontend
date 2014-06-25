@@ -1,0 +1,38 @@
+.large-form{
+  width: 300px;
+  margin: 20px auto;
+}
+.large-form input[type=text],
+.large-form input[type=email],
+.large-form input[type=password]{
+  display:block;
+  background: #fff;
+  border:1px solid #888;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 16px;
+  width: 290px;
+  margin-bottom: 10px;
+}
+.large-form input.ng-invalid.ng-dirty{
+  border-color:#ff0000;
+  background:#ffcccc;
+}
+.large-form .submit-container{
+  margin-top: 40px;
+}
+[d=l] .large-form .submit-container{
+  text-align: right;
+}
+[d=r] .large-form .submit-container{
+  text-align: left;
+}
+.large-form .link{
+  display:block;
+}
+[d=l] .large-form .link{
+  float: right;
+}
+[d=r] .large-form .link{
+  float: left;
+}

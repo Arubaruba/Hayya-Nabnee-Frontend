@@ -1,12 +1,19 @@
 {
-  "Locale Code":"en",
-  "Locale Direction":"l",
+  "Locale Code": "en",
+  "Locale Direction": "l",
 
-  "Home":"Home",
+  "Home": "Home",
 
   "Sign Up": "Sign Up",
   "Sign In": "Sign In",
 
-  "Hayya Nabnee":"Hayya Nabnee",
-  "Let's Build":"Let's Build"
+  "Hayya Nabnee": "Hayya Nabnee",
+  "Let's Build": "Let's Build",
+
+  "Name": "Name",
+  "Email Address": "Email Address",
+  "Password": "Password",
+  "Repeat Password": "Repeat Password",
+  "I already have an Account": "I already have an Account",
+  "Create my Account!": "Create my Account!"
 }

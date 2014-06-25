@@ -19,7 +19,6 @@ class I18n {
     List<dynamic> jsonData = (arg == 'g') ? globalJsonData : localJsonData;
 
     if (jsonData != null && jsonData[value] != null) {
-      print(value);
       return jsonData[value];
     } else {
       if (jsonData != null) {
@@ -48,6 +47,7 @@ class I18nSwitch {
         if (data != null) {
           localJsonData = data;
           currentLocale = localeCode;
+          window.localStorage['language'] = localeCode;
           showBody = false;
           rootScope.digest();
           showBody = true;

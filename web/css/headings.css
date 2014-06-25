@@ -12,7 +12,7 @@ h2::after{
   display:block;
   content:'';
   width: 100%;
-  border-bottom:1px solid #333;
+  border-bottom:1px solid #888;
 }
 h3{
   font-size: 25px;
@@ -25,9 +25,10 @@ h4{
   margin-bottom: 12px;
 }
 #website_title{
-  color:#ccc;
+  color:#eee;
   font-weight:bold;
   font-size: 45px;
+  line-height: 60px;
 }
 #website_slogan{
   color:#333;

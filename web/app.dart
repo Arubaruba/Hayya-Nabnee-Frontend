@@ -26,11 +26,13 @@ class AppModule extends Module {
 void initRoutes(Router router, RouteViewFactory view) {
   router.root
       ..addRoute(defaultRoute: true, name: 'projects', path: '/projects', enter: view('views/project_list.html'))
+          ..addRoute(name: 'sign_up', path: '/sign_up', enter: view('views/sign_up.html'))
       ..addRoute(name: '', path: '/project/:projectId', enter: view('views/project.html'));
 }
 
 main() {
   //The the localization strings need to be loaded before the app can be displayed
+  if(window.localStorage.containsKey("language")) currentLocale = window.localStorage["language"];
   loadI18nData(currentLocale).then((_){
     applicationFactory().addModule(new AppModule()).run();
   });

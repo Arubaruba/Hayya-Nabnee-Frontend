@@ -10,9 +10,10 @@ server {
 
 	location ~ /packages/(.+)$ {
 		alias /home/andreas/Git/Hayya-Nabnee-Frontend/packages/$1;
-		expires 30d;
-		add_header Pragma public;
-		add_header Cache-Control "public";
+
+		#add_header Cache-Control "public, max-age=1000000000";
+		#add_header Content-Type "text/html; charset=UTF-8";
+		#add_header Expires "Fri, 19 Jun 2200 22:23:40 GMT";
 	}
 
 	location /backend {

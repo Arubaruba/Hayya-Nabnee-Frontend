@@ -1,18 +1,18 @@
 <!DOCTYPE HTML>
-<html lang="{{'Locale Code'|i}}" dir="auto" d="{{'Locale Direction'|i}}">
+<html lang="{{'Locale Code'|i}}" dir="auto">
   <head>
     <link rel="stylesheet" type="text/css" href="/css/master.css">
     <script type="application/dart" src="app.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </head>
   <body i18n-switch ng-cloak>
-    <div ng-if="languageSwitch.showBody != false">
+    <div id="content" ng-if="languageSwitch.showBody != false" d="{{'Locale Direction'|i}}">
       <div id="upper_area">
         <div id="upper_menu">
           <a href="/" class="link">{{'Home'|i}}</a>
           <span id="right_area">
             <a href="" class="link">{{'Sign In'|i}}</a>
-            <a href="" class="button">{{'Sign Up'|i}}</a>
+            <a href="/sign_up" class="button">{{'Sign Up'|i}}</a>
           </span>
         </div>
         <div id="title_area">
@@ -25,8 +25,7 @@
           </a>
         </div>
       </div>
-      Sample Text
-      <ng-view></ng-view>
+      <ng-view id="middle_area"></ng-view>
     </div>
   </body>
 </html>
