@@ -1,7 +1,7 @@
 part of app;
 
 const String i18nDir = '/i18n/';
-final List<String> localeCodes = ['en', 'ar']; //The first one is the default locale
+final List<String> localeCodes = ['en']; //The first one is the default locale
 String currentLocale = 'en';
 
 dynamic globalJsonData;
@@ -15,7 +15,7 @@ class I18n {
   I18n(this.scope);
 
   call(var value, [var arg]) {
-    
+
     List<dynamic> jsonData = (arg == 'g') ? globalJsonData : localJsonData;
 
     if (jsonData != null && jsonData[value] != null) {
@@ -34,9 +34,9 @@ class I18nSwitch {
 
   bool showBody = true;
   RootScope rootScope;
-  
+
   I18nSwitch(this.rootScope);
-  
+
   List<String> getOtherLocales() {
     return localeCodes.where((String code) => code != currentLocale).toList();
   }
@@ -64,7 +64,7 @@ Future<List> loadI18nData(String localeCode) {
 
   final String globalJsonFile = i18nDir + 'global.json';
   final String localJsonFile = i18nDir + localeCode + '.json';
-  
+
   return Future.wait([loadJson(globalJsonFile).then((dynamic data) {
       globalJsonData = data;
     }).catchError((_) {

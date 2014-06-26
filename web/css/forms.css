@@ -3,7 +3,7 @@ input{
 }
 .large-form{
   width: 300px;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 .large-form input[type=text],
 .large-form input[type=email],

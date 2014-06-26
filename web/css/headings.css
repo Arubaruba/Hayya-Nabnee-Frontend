@@ -29,6 +29,7 @@ h4{
   font-weight:bold;
   font-size: 45px;
   line-height: 60px;
+  text-shadow: 0 0 1px #333;
 }
 #website_slogan{
   color:#333;

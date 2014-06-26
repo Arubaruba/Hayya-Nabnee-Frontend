@@ -8,20 +8,24 @@
   <body i18n-switch ng-cloak>
     <div id="content" ng-if="languageSwitch.showBody != false" d="{{'Locale Direction'|i}}">
       <div id="upper_area">
+        <div id="upper_menu">
+          <a href="" class="link">{{'Sign In'|i}}</a>
+          <a href="/sign_up" class="button">{{'Sign Up'|i}}</a>
+        </div>
         <div id="title_area">
           <div id="website_title">{{'E-Lingua'|i}}</div>
           <div id="website_slogan">{{'Slogan'|i}}</div>
-        </div>
-        <div id="upper_menu">
-          <a href="/" class="link">{{'Home'|i}}</a>
-          <a href="" class="link">{{'Sign In'|i}}</a>
-          <a href="/sign_up" class="button">{{'Sign Up'|i}}</a>
         </div>
         <div id="language_selection_area">
           <a class="language" ng-repeat="locale in languageSwitch.getOtherLocales() | orderBy:''" ng-click="languageSwitch.setLocale(locale)" href="">
             {{locale|i:'g'}}
           </a>
         </div>
+      </div>
+      <div id="middle_menu">
+        <a href="/" class="link">{{'Home'|i}}</a>|
+        <a href="/" class="link">{{'Schedule a Tutor'|i}}</a>|
+        <a href="/" class="link">{{'Contact us'|i}}</a>
       </div>
       <ng-view id="middle_area"></ng-view>
     </div>
