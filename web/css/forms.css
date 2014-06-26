@@ -1,3 +1,6 @@
+input{
+  font-family: "Arial Black", Gadget, sans-serif;
+}
 .large-form{
   width: 300px;
   margin: 20px auto;
@@ -20,19 +23,9 @@
 }
 .large-form .submit-container{
   margin-top: 40px;
-}
-[d=l] .large-form .submit-container{
   text-align: right;
-}
-[d=r] .large-form .submit-container{
-  text-align: left;
 }
 .large-form .link{
   display:block;
-}
-[d=l] .large-form .link{
   float: right;
-}
-[d=r] .large-form .link{
-  float: left;
 }

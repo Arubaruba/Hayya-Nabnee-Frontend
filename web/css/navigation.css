@@ -4,14 +4,8 @@ input[type=submit], input[type=button], a{
 #upper_menu .link{
   color: #333;
   text-decoration: underline;
-}
-[d=l] #upper_menu .link{
   margin-right: 12px;
   float:left;
-}
-[d=r] #upper_menu .link{
-  margin-left: 12px;
-  float: right;
 }
 
 #upper_menu .link:hover{

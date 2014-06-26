@@ -11,6 +11,7 @@ server {
 	#PRODUCTION-ONLY:
 	#
 	#expires 7d;
+	expires 0s;
 
 	location ~ /packages/(.+)$ {
 		alias /home/andreas/Git/E-Lingua-Frontend/packages/$1;
