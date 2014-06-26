@@ -4,12 +4,16 @@ server {
 	listen 5667 default_server;
 	listen [::]:5667 default_server ipv6only=on;
 
-	root /home/andreas/Git/Hayya-Nabnee-Frontend/web/;
+	root /home/andreas/Git/E-Lingua-Frontend/web/;
 
 	server_name localhost;
 
+	#PRODUCTION-ONLY:
+	#
+	#expires 7d;
+
 	location ~ /packages/(.+)$ {
-		alias /home/andreas/Git/Hayya-Nabnee-Frontend/packages/$1;
+		alias /home/andreas/Git/E-Lingua-Frontend/packages/$1;
 
 		#add_header Cache-Control "public, max-age=1000000000";
 		#add_header Content-Type "text/html; charset=UTF-8";

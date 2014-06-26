@@ -2,10 +2,8 @@
 <html lang="{{'Locale Code'|i}}" dir="auto">
   <head>
     <link rel="stylesheet" type="text/css" href="/css/master.css">
-    <!--
     <script type="application/dart" src="app.dart"></script>
-    <script src="packages/browser/dart.js"></script>-->
-    <script type="application/javascript" src="build/dart-compiled.js"></script>
+    <script src="packages/browser/dart.js"></script>
   </head>
   <body i18n-switch ng-cloak>
     <div id="content" ng-if="languageSwitch.showBody != false" d="{{'Locale Direction'|i}}">
@@ -18,8 +16,8 @@
           </span>
         </div>
         <div id="title_area">
-          <div id="website_title">{{'Hayya Nabnee'|i}}</div>
-          <div id="website_slogan">{{'Let\'s Build'|i}}</div>
+          <div id="website_title">{{'E-Lingua'|i}}</div>
+          <div id="website_slogan">{{'Slogan'|i}}</div>
         </div>
         <div id="language_selection_area">
           <a class="language" ng-repeat="locale in languageSwitch.getOtherLocales() | orderBy:''" ng-click="languageSwitch.setLocale(locale)" href="">
