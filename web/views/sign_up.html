@@ -1,9 +1,9 @@
 <form class="large-form" sign-up>
   <h2>{{'Sign Up'|i}}</h2>
-  <input ng-required="true" ng-model="username" type="text" placeholder="{{'Name'|i}}">
-  <input ng-required="true" ng-model="email" type="email" placeholder="{{'Email Address'|i}}">
-  <input ng-required="true" ng-model="password" type="text" placeholder="{{'Password'|i}}">
-  <input ng-required="true" ng-model="repeatPassword" type="text" placeholder="{{'Repeat Password'|i}}">
+  <input ng-required="true" ng-model="ctrl.username" type="text" placeholder="{{'Name'|i}}">
+  <input ng-required="true" ng-model="ctrl.email" type="email" placeholder="{{'Email Address'|i}}">
+  <input ng-required="true" ng-model="ctrl.password" type="text" placeholder="{{'Password'|i}}">
+  <input ng-required="true" ng-model="ctrl.repeatPassword" type="text" placeholder="{{'Repeat Password'|i}}">
   <a href="/sign_in" class="small-dark-link link">{{'I already have an Account'|i}}</a>
   <div class="submit-container">
     <input ng-click="ctrl.submit()" type="submit" class="small-blue-button" value="{{'Create my Account!'|i}}">

@@ -1,5 +1,7 @@
 library app;
 
+@MirrorsUsed(targets: const['app'], override: '*')
+import 'dart:mirrors';
 import 'dart:html';
 import 'dart:async';
 import 'dart:convert';
@@ -9,7 +11,7 @@ import 'package:angular/routing/module.dart';
 
 part 'modules/json.dart';
 
-part 'controllers/project_list.dart';
+part 'controllers/sign_up.dart';
 part 'controllers/i18n.dart';
 
 const bool DEBUG_MODE = true;
@@ -19,7 +21,7 @@ class AppModule extends Module {
     bind(RouteInitializerFn, toValue: initRoutes);
     bind(I18n);
     bind(I18nSwitch);
-    bind(ProjectList);
+    bind(SignUp);
   }
 }
 
