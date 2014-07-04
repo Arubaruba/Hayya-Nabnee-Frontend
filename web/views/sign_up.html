@@ -1,5 +1,16 @@
 <form class="large-form" sign-up>
-  <h2>{{'Sign Up'|i}}</h2>
+
+  <a facebook href="{{ctrl.facebookLogin}}" id="sign_in_with_facebook">
+    {{'Sign in with Facebook'|i}} <img src="/images/facebook_icon.png" alt="Facebook-Icon">
+  </a>
+
+  <div id="large-or-text">
+    <span id="text">
+      {{'Or'|i}}
+    </span>
+  </div>
+
+  <h3>{{'Sign Up'|i}}</h3>
   <input ng-required="true" ng-model="ctrl.username" type="text" placeholder="{{'Name'|i}}">
   <input ng-required="true" ng-model="ctrl.email" type="email" placeholder="{{'Email Address'|i}}">
   <input ng-required="true" ng-model="ctrl.password" type="password" placeholder="{{'Password'|i}}">

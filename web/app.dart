@@ -9,10 +9,13 @@ import 'package:angular/angular.dart';
 import 'package:angular/application_factory.dart';
 import 'package:angular/routing/module.dart';
 
+import 'config.dart';
+
 part 'modules/json.dart';
 
 part 'controllers/sign_up.dart';
 part 'controllers/i18n.dart';
+part 'controllers/facebook.dart';
 
 const bool DEBUG_MODE = true;
 
@@ -22,14 +25,14 @@ class AppModule extends Module {
     bind(I18n);
     bind(I18nSwitch);
     bind(SignUp);
+    bind(Facebook);
   }
 }
 
 void initRoutes(Router router, RouteViewFactory view) {
   router.root
       ..addRoute(defaultRoute: true, name: 'projects', path: '/projects', enter: view('views/project_list.html'))
-          ..addRoute(name: 'sign_up', path: '/sign_up', enter: view('views/sign_up.html'))
-      ..addRoute(name: '', path: '/project/:projectId', enter: view('views/project.html'));
+      ..addRoute(name: 'sign_up', path: '/sign_up', enter: view('views/sign_up.html'));
 }
 
 main() {

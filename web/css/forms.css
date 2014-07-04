@@ -29,3 +29,38 @@ input{
   display:block;
   float: right;
 }
+
+
+#sign_in_with_facebook{
+  display: block;
+  text-decoration: none;
+  background: #3b579d;
+  color: #fff;
+  border-radius:3px;
+  font-size: 20px;
+  height: 30px;
+  margin:60px 0 30px 0;
+  text-align: center;
+  padding: 4px;
+}
+img[alt="Facebook-Icon"]{
+  position:relative;
+  top:2px;
+}
+#large-or-text{
+  font-size: 33px;
+  text-align: center;
+}
+#large-or-text #text{
+  padding: 15px;
+  background:#ddd;
+}
+#large-or-text::after{
+  position:relative;
+  top: -20px;
+  margin-top:5px;
+  display:block;
+  content:'';
+  border-bottom:1px solid #888;
+  z-index: -1;
+}
