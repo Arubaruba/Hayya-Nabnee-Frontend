@@ -1,3 +1,7 @@
+input{
+  font-family: inherit;
+  font-family: sans-serif;
+}
 input[type=submit], input[type=button], a{
   cursor:pointer;
 }
@@ -6,6 +10,7 @@ input[type=submit], input[type=button], a{
   background:#0078b9;
   color: #eee;
   text-decoration: none;
+  font-weight: normal;
   padding: 5px;
   border-radius: 3px;
   font-size: 18px;

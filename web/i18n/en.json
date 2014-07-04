@@ -19,5 +19,7 @@
   "Password": "Password",
   "Repeat Password": "Repeat Password",
   "I already have an Account": "I already have an Account",
-  "Create my Account!": "Create my Account!"
+  "Create my Account!": "Create my Account!",
+
+  "Page not Found": "Page not Found"
 }

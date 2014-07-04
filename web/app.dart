@@ -31,8 +31,9 @@ class AppModule extends Module {
 
 void initRoutes(Router router, RouteViewFactory view) {
   router.root
-      ..addRoute(defaultRoute: true, name: 'projects', path: '/projects', enter: view('views/project_list.html'))
-      ..addRoute(name: 'sign_up', path: '/sign_up', enter: view('views/sign_up.html'));
+      ..addRoute(name: 'projects', path: '/projects', enter: view('views/project_list.html'))
+      ..addRoute(name: 'sign_up', path: '/sign_up', enter: view('views/sign_up.html'))
+      ..addRoute(defaultRoute: true, name: 'page_not_found', path: '/page_not_found', enter: view('views/page_not_found.html'));
 }
 
 main() {
