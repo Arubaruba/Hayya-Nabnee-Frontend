@@ -1,7 +1,7 @@
 part of app;
 
 const String i18nDir = '/i18n/';
-final List<String> localeCodes = ['en']; //The first one is the default locale
+final List<String> localeCodes = ['en','ar']; //The first one is the default locale
 String currentLocale = 'en';
 
 dynamic globalJsonData;
@@ -9,10 +9,6 @@ dynamic localJsonData;
 
 @Formatter(name: 'i')
 class I18n {
-
-  Scope scope;
-
-  I18n(this.scope);
 
   call(var value, [var arg]) {
 
@@ -34,8 +30,9 @@ class I18nSwitch {
 
   bool showBody = true;
   RootScope rootScope;
+  JsonLoader jsonLoader;
 
-  I18nSwitch(this.rootScope);
+  I18nSwitch(this.rootScope, this.jsonLoader);
 
   List<String> getOtherLocales() {
     return localeCodes.where((String code) => code != currentLocale).toList();
@@ -43,7 +40,7 @@ class I18nSwitch {
 
   void setLocale(String localeCode) {
     try {
-      loadJson(i18nDir + localeCode + '.json').then((dynamic data) {
+      jsonLoader.load(i18nDir + localeCode + '.json').then((dynamic data) {
         if (data != null) {
           localJsonData = data;
           currentLocale = localeCode;

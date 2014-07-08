@@ -6,6 +6,11 @@
     <script src="packages/browser/dart.js"></script>
   </head>
   <body i18n-switch ng-cloak>
+    <span global_messenger>
+      <div ng-if="ctrl1.messageVisible" id="global_message">
+        <span id="inner_area">{{ctrl1.message}}</span>
+      </div>
+    </span>
     <div id="content" ng-if="languageSwitch.showBody != false">
       <div id="upper_area">
         <div id="upper_menu">

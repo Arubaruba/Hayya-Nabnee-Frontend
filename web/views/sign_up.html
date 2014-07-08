@@ -1,5 +1,4 @@
-<form class="large-form" sign-up>
-
+<div class="large-form">
   <a facebook href="{{ctrl.facebookLogin}}" id="sign_in_with_facebook">
     {{'Sign in with Facebook'|i}} <img src="/images/facebook_icon.png" alt="Facebook-Icon">
   </a>
@@ -10,13 +9,15 @@
     </span>
   </div>
 
-  <h3>{{'Sign Up'|i}}</h3>
-  <input ng-required="true" ng-model="ctrl.username" type="text" placeholder="{{'Name'|i}}">
-  <input ng-required="true" ng-model="ctrl.email" type="email" placeholder="{{'Email Address'|i}}">
-  <input ng-required="true" ng-model="ctrl.password" type="password" placeholder="{{'Password'|i}}">
-  <input ng-required="true" ng-model="ctrl.repeatPassword" type="password" placeholder="{{'Repeat Password'|i}}">
-  <a href="/sign_in" class="small-dark-link link">{{'I already have an Account'|i}}</a>
-  <div class="submit-container">
-    <input ng-click="ctrl.submit()" type="submit" class="medium-blue-button" value="{{'Create my Account!'|i}}">
-  </div>
-</form>
+  <form ng-submit="ctrl.submit()" sign-up>
+    <h3>{{'Sign Up'|i}}</h3>
+    <input ng-required="true" ng-model="ctrl.username" type="text" placeholder="{{'Name'|i}}">
+    <input ng-required="true" ng-model="ctrl.email" type="email" placeholder="{{'Email Address'|i}}">
+    <input ng-required="true" ng-model="ctrl.password" type="password" placeholder="{{'Password'|i}}">
+    <input ng-required="true" ng-model="ctrl.repeatPassword" type="password" placeholder="{{'Repeat Password'|i}}">
+    <a href="/sign_in" class="small-dark-link link">{{'I already have an Account'|i}}</a>
+    <div class="submit-container">
+      <input type="submit" class="medium-blue-button" value="{{'Create my Account!'|i}}">
+    </div>
+  </form>
+</div>

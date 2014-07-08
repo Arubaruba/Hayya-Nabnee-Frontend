@@ -9,6 +9,19 @@ body{
 body[ng-cloak]{
   display:none;
 }
+#global_message{
+  top: 100px;
+  position:absolute;
+  text-align: center;
+  width:100%;
+}
+#global_message #inner_area{
+  display:inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 30px;
+  background:#F2533A;
+}
 #upper_area{
   padding:10px;
   background:#FF7519;
